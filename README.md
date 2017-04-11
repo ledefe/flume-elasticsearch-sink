@@ -14,19 +14,13 @@
 
   * jackson-databind-2.3.1.jar
 
-  * joda-time-2.1.jar
+  * jopt-simple-3.2.jar
 
   * log4j-1.2.17.jar
 
-  * netty-3.5.12.Final.jar
+  * netty-3.9.4.Final.jar
 
-  * guava-11.0.2.jar
-
-  * flume-ng-elasticsearch-sink-1.6.0.jar
-
-  * elasticsearch-1.7.4.jar
-
-  * lucene-core-4.10.4.jar
+  * flume-ng-elasticsearch-sink-1.6.7.jar
 
   * slf4j-log4j12-1.6.1.jar
   
