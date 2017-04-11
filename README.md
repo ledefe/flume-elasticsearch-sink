@@ -2,8 +2,6 @@
   
   Base on: https://github.com/Redliver/flume-ng-elasticsearch5-sink
   
-  
-## Modifications to your Flume lib path:
 
 ## 1.install project to get flume-elasticsearch-sink-0.0.1-SNAPSHOT.jar
 
