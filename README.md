@@ -3,10 +3,10 @@
   Base on: https://github.com/Redliver/flume-ng-elasticsearch5-sink
   
   
-  # # Modifications to your Flume lib path:
+  * Modifications to your Flume lib path:
   
   
-  # # Libraries to be removed:
+  * Libraries to be removed:
 
 jackson-annotations-2.3.0.jar
 
