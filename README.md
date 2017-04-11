@@ -4,8 +4,12 @@
   
 
 ## 1.install project to get flume-elasticsearch-sink-0.0.1-SNAPSHOT.jar
+   
+    mvn install
 
-## 2.mvn dependency:copy-dependencies to get dependencies jars
+## 2.to get dependencies jars
+   
+   mvn dependency:copy-dependencies
 
 ## 3.copy target/dependencies jars into flume/lib 
   
