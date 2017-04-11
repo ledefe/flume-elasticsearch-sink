@@ -4,9 +4,14 @@
   
   
 ## Modifications to your Flume lib path:
+
+## 1.install project to get flume-elasticsearch-sink-0.0.1-SNAPSHOT.jar
+
+## 2.mvn dependency:copy-dependencies to get dependencies jars
+
+## 3.copy target/dependencies jars into flume/lib 
   
-  
-## Libraries to be removed:
+## 4.Libraries to be removed from flume/lib:
 
   * jackson-annotations-2.3.0.jar
 
@@ -19,6 +24,8 @@
   * log4j-1.2.17.jar
 
   * netty-3.9.4.Final.jar
+  
+  * guava-11.0.2.jar
 
   * flume-ng-elasticsearch-sink-1.6.7.jar
 
