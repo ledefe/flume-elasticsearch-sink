@@ -31,4 +31,8 @@
 
   * slf4j-log4j12-1.6.1.jar
   
+ ## 5.Upgrade log conf from log4j to log4j2
+ 
+  * copy log4j2.xml to flume/conf
+  
 
