@@ -100,7 +100,7 @@ public class ElasticSearchSinkConstants {
 
     public static final int DEFAULT_TTL = -1;
 
-    public static final String DEFAULT_INDEX_NAME = "flume";
+	public static final String DEFAULT_INDEX_NAME = "flume";
 
     public static final String DEFAULT_INDEX_TYPE = "log";
 

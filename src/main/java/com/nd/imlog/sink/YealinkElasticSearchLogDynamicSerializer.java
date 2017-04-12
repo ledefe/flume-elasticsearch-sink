@@ -46,7 +46,12 @@ public class YealinkElasticSearchLogDynamicSerializer implements ElasticSearchEv
 			// fixed to JsonParseException
 			ContentBuilderUtil.addSimpleField(builder, "@message", event.getBody());
 		}
-		appendHeaders(builder, event);
+		try{
+			appendHeaders(builder, event);
+		} catch (Exception e) {
+			logger.error("Exception in jsonParse with headers", e);
+		}
+		builder.endObject();
 		return builder;
 	}
 

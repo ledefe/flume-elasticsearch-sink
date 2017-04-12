@@ -15,6 +15,8 @@
  */
 
 package org.apache.flume.sink.elasticsearch5;
+
+import org.apache.commons.lang.StringUtils;
 import org.apache.flume.Context;
 import org.apache.flume.Event;
 import org.apache.flume.conf.ComponentConfiguration;
@@ -22,24 +24,25 @@ import org.apache.flume.formatter.output.BucketPath;
 
 public class SimpleIndexNameBuilder implements IndexNameBuilder {
 
-  private String indexName;
+	private String indexName;
 
-  @Override
-  public String getIndexName(Event event) {
-    return BucketPath.escapeString(indexName, event.getHeaders());
-  }
+	@Override
+	public String getIndexName(Event event) {
+		return getIndexPrefix(event);
+	}
 
-  @Override
-  public String getIndexPrefix(Event event) {
-    return BucketPath.escapeString(indexName, event.getHeaders());
-  }
+	@Override
+	public String getIndexPrefix(Event event) {
+		String realIndexPrefix = BucketPath.escapeString(indexName, event.getHeaders());
+		return StringUtils.isEmpty(realIndexPrefix) ? ElasticSearchSinkConstants.DEFAULT_INDEX_NAME : realIndexPrefix;
+	}
 
-  @Override
-  public void configure(Context context) {
-    indexName = context.getString(ElasticSearchSinkConstants.INDEX_NAME);
-  }
+	@Override
+	public void configure(Context context) {
+		indexName = context.getString(ElasticSearchSinkConstants.INDEX_NAME);
+	}
 
-  @Override
-  public void configure(ComponentConfiguration conf) {
-  }
+	@Override
+	public void configure(ComponentConfiguration conf) {
+	}
 }

@@ -78,6 +78,7 @@ public class ElasticSearchLogStashEventSerializer implements
         XContentBuilder builder = jsonBuilder().startObject();
         appendBody(builder, event);
         appendHeaders(builder, event);
+        builder.endObject();
         return builder;
     }
 
